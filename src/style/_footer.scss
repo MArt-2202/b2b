@@ -1,0 +1,255 @@
+footer {
+	font-size: $fs-13;
+	line-height: 1;
+	color: $c-2;
+	opacity: 0;
+
+	h2 {
+		position: relative;
+		margin-bottom: 38px;
+		padding-top: 4px;
+		padding-bottom: 12px;
+		font-size: $fs-24;
+		line-height: 1;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 2px;
+			bottom: 0;
+			width: 30px;
+			height: 4px;
+			background: $c-3;
+		}
+	}
+
+	ul {
+		li {
+			margin-bottom: 11px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				position: relative;
+				padding-left: 20px;
+
+				.fa {
+					position: absolute;
+					left: 0;
+					top: -2px;
+					font-size: $fs-15;
+				}
+			}
+
+			a:hover {
+				margin-left: 5px;
+			}
+		}
+	}
+
+	a {
+		display: inline-block;
+		color: $c-2;
+		text-decoration: none;
+
+		&[href^='tel'] {
+			font-size: $fs-17;
+			line-height: 1;
+		}
+
+		&:hover {
+			color: $c-3;
+		}
+	}
+}
+
+.footer__top {
+	padding-top: 80px;
+	padding-bottom: 15px;
+	background: $c-4;
+}
+
+.logo-company-gold {
+	margin-bottom: 25px;
+}
+
+.social {
+	margin-top: 26px;
+
+	a {
+		width: 35px;
+		height: 35px;
+		margin-right: 10px;
+		color: $c-2;
+		line-height: 40px !important;
+		text-align: center;
+		border-radius: 50%;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			background: $c-2;
+		}
+	}
+
+	.fa {
+		font-size: $fs-18;
+		line-height: 1;
+	}
+}
+
+.social__facebok {
+	background: $c-5;
+
+	&:hover {
+		color: $c-5;
+	}
+}
+
+.social__instagram {
+	background: $c-6;
+
+	&:hover {
+		color: $c-6;
+	}
+}
+
+.footer__content {
+	opacity: 0;
+
+	> div {
+		margin-bottom: 60px;
+	}
+}
+
+.cssgrid {
+	.footer__content {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 2.7%;
+	}
+}
+
+.no-cssgrid {
+	.footer__content {
+		display: table;
+		width: 100%;
+		font-size: 0;
+
+		> div {
+			display: inline-block;
+			vertical-align: top;
+			width: 22.975%;
+			margin-right: 2.7%;
+			font-size: $fs-13;
+
+			&:nth-child(4n + 4) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.cssgrid,
+.no-cssgrid {
+	.footer__content {
+		opacity: 1;
+	}
+}
+
+.footer__bottom {
+	padding-top: 19px;
+	padding-bottom: 17px;
+	text-align: center;
+	background: $c-3;
+	color: $c-4;
+}
+
+@media (max-width: 991px) {
+	.footer__top {
+		padding-top: 40px;
+		padding-bottom: 0;
+	}
+
+	.cssgrid {
+		.footer__content {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.no-cssgrid {
+		.footer__content {
+			> div {
+				width: 48.65%;
+
+				&:nth-child(2n + 2) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	footer {
+		h2 {
+			margin-bottom: 32px;
+		}
+	}
+
+	.footer__top {
+		padding-bottom: 40px;
+	}
+
+	.footer__content {
+		> div {
+			margin-bottom: 42px;
+
+			&:first-child {
+				margin-bottom: 20px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.logo-company-gold,
+	.logo-company-gold + p {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.logo-company-gold {
+		width: 42px;
+		margin-bottom: 0;
+	}
+
+	.logo-company-gold + p {
+		width: calc(100% - 46px);
+		margin-bottom: 10px;
+		padding-left: 30px;
+	}
+
+	.social {
+		margin-top: 50px;
+	}
+
+	.cssgrid,
+	.cssgrid {
+		.footer__content {
+			display: block;
+
+			> div {
+				display: block;
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+	}
+}

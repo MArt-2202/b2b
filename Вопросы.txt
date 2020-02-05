@@ -1,0 +1,35 @@
+webpack.config.js:
+===================================================
+1) 
+   Как правильно:
+   const isDev = process.env.NODE_ENV === 'development';
+   или
+   const isDev = argv.mode === 'development';
+
+2) 
+  Не работает sourcemap для sass при npm run start
+
+3) 
+  Возможно ли ускорить перезагрузку страницы
+  при внесении правок в html, scss ? (в режиме npm run start)
+  Просмотрите пожалуйста webpack.config.js. 
+  Может настройки devser-a ( cтрока 181) ?
+  Если добавить в package.json ключи --hot --inline,
+  не срабатывает livereload (если в webpack.config.js добавить hot: true - так же)
+
+4) Возможно ли как в Gulpe-e сделать следующее ?
+   В проекте есть папка plugins c плагинами.
+   Необходимо автоматизированно делать компиляцию файла plugins.js 
+   с плагинами из папки plugins, и закидать plugins.js в папку js.
+   Пока делал вручную. Просто вставлял скопированые скрипты плагинов в plugins.js
+
+=========================================
+5) Добавляется в конце body
+   Этот файл нужен в финальной сборке.
+   Или его можно удалять из html и самой корневой папки dist ?
+   vendors~bundle.ddba84353f9beb4ed359.js
+   И что это за файл генерируется при сборке ?
+   vendors~bundle.ddba84353f9beb4ed359.js.LICENSE
+
+
+
